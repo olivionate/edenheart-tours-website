@@ -50,15 +50,15 @@ const Footer = () => {
             <div className="space-y-3">
               <div className="flex items-center space-x-3 text-sm">
                 <Phone className="h-4 w-4 text-accent" />
-                <span>+254 700 123 456</span>
+                <span>0721658788</span>
               </div>
               <div className="flex items-center space-x-3 text-sm">
                 <Mail className="h-4 w-4 text-accent" />
-                <span>info@edenhearttours.com</span>
+                <span>info@edenheart.co.ke</span>
               </div>
               <div className="flex items-center space-x-3 text-sm">
                 <MapPin className="h-4 w-4 text-accent" />
-                <span>Nairobi CBD, Kenya</span>
+                <span>2nd Flr, Delta Hse, Nairobi CBD</span>
               </div>
             </div>
           </div>

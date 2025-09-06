@@ -34,19 +34,19 @@ const Contact = () => {
     {
       icon: Phone,
       title: "Call Us",
-      details: ["+254 700 123 456", "+254 722 987 654"],
+      details: ["0721658788"],
       description: "Available 24/7 for emergencies"
     },
     {
       icon: Mail,
       title: "Email Us",
-      details: ["info@edenhearttours.com", "bookings@edenhearttours.com"],
+      details: ["info@edenheart.co.ke"],
       description: "We respond within 2 hours"
     },
     {
       icon: MapPin,
       title: "Visit Us",
-      details: ["Nairobi CBD, Kenya", "Mombasa Office, Coast"],
+      details: ["2nd Flr, Delta Hse, Nairobi CBD"],
       description: "Monday - Friday, 8AM - 6PM"
     },
     {
@@ -176,7 +176,7 @@ const Contact = () => {
                         name="phone"
                         value={formData.phone}
                         onChange={handleChange}
-                        placeholder="+254 700 123 456"
+                        placeholder="0721658788"
                         className="w-full"
                       />
                     </div>
