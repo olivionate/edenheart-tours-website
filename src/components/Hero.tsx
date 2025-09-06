@@ -19,9 +19,6 @@ const Hero = () => {
         style={{ backgroundImage: `url(${heroImage})` }}
       />
       
-      {/* Overlay */}
-      <div className="absolute inset-0 bg-gradient-hero" />
-      
       {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-20 left-10 w-32 h-32 bg-accent/10 rounded-full animate-float" />
