@@ -5,24 +5,29 @@ import { Card, CardContent } from '@/components/ui/card';
 const About = () => {
   const values = [
     {
-      icon: Heart,
-      title: "Passionate Service",
-      description: "We pour our hearts into creating unforgettable experiences that exceed expectations."
+      icon: Award,
+      title: "Experience and Reliability",
+      description: "With years of experience, we have honed our expertise in providing authentic and stimulating safari experiences with long-standing industry relationships."
     },
     {
-      icon: Shield,
-      title: "Safety First",
-      description: "Your safety and peace of mind are our top priorities on every adventure."
+      icon: Heart,
+      title: "Tailor-made Safaris",
+      description: "We offer tailor-made safaris that cater to individual budgets, schedules, and preferences, accommodating different interests and time limits."
+    },
+    {
+      icon: Users,
+      title: "Expert Guides",
+      description: "Our network of expert local guides are knowledgeable, multilingual, and have extensive field experience for the best possible sightings."
     },
     {
       icon: Globe,
-      title: "Sustainable Tourism",
-      description: "We're committed to responsible travel that benefits local communities and wildlife."
+      title: "Variety of Destinations",
+      description: "We offer safaris to various destinations in Kenya, Tanzania, Uganda, and beach extensions, each with unique attractions to explore."
     },
     {
-      icon: Award,
-      title: "Expert Guides",
-      description: "Our experienced local guides share deep knowledge and authentic cultural insights."
+      icon: Shield,
+      title: "Certified & Licensed",
+      description: "We are a licensed and certified tour operator, ensuring our clients are protected by necessary regulations and standards."
     }
   ];
 
@@ -53,23 +58,28 @@ const About = () => {
           {/* Text Content */}
           <div className="space-y-6">
             <h3 className="text-3xl font-bold text-foreground">
-              Your Gateway to Kenya's Wonders
+              Your Trusted Partner for East African Adventures
             </h3>
             <p className="text-muted-foreground leading-relaxed">
-              Edenheart Tours & Travel was born from a passion for showcasing Kenya's incredible 
-              diversity—from the thundering wildebeest migration in the Maasai Mara to the pristine 
-              coral reefs of Diani Beach. We believe every journey should be transformative.
+              We are a tours and travel agency based in Kenya, with a special focus on safaris and 
+              expeditions both locally and across our borders. Our experience in providing thrilling 
+              and magical safaris sets us apart as the most trustworthy partner in planning your 
+              East African dream holiday.
             </p>
             <p className="text-muted-foreground leading-relaxed">
-              Our team of local experts doesn't just show you destinations; we share stories, 
-              traditions, and hidden gems that only insiders know. Whether you're seeking the 
-              thrill of a Big Five encounter or the serenity of a sunset dhow cruise, we craft 
-              each experience with attention to detail and genuine care.
+              From mountain trekking to enjoying an evening at the beach or birdwatching, travelling 
+              in East Africa is a breathtaking and enthralling adventure waiting to be seized. Let 
+              Edenheart Tours & Travel Agency plan your trip and we guarantee unforgettable memories.
             </p>
             <p className="text-muted-foreground leading-relaxed">
-              We're more than a travel company—we're your partners in adventure, committed to 
-              sustainable tourism that supports local communities and preserves Kenya's natural 
-              heritage for future generations.
+              We offer budget safaris, mid-range safaris, luxury safaris, half-day and full-day 
+              excursions, beach holiday packages, airport transfers, hotel & accommodation bookings, 
+              and many more. All our packages can be customized and tailor-made to your preferences, 
+              ensuring your trip is memorable and hassle-free.
+            </p>
+            <p className="text-muted-foreground leading-relaxed">
+              Our professional tour guides are knowledgeable and will assist you in organizing 
+              transport, identifying animals during game drives, and managing the itinerary.
             </p>
           </div>
 
@@ -94,10 +104,10 @@ const About = () => {
         {/* Values Section */}
         <div>
           <h3 className="text-3xl font-bold text-foreground text-center mb-12">
-            Our Core Values
+            Why Choose Edenheart Tours & Travel
           </h3>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-8">
             {values.map((value, index) => (
               <Card 
                 key={index} 

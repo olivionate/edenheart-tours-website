@@ -40,8 +40,8 @@ const Hero = () => {
             </span>
           </h1>
           <p className="text-xl md:text-2xl text-white/90 mb-8 max-w-3xl mx-auto leading-relaxed">
-            From breathtaking safaris to pristine beaches, let Edenheart Tours & Travel 
-            create unforgettable memories that last a lifetime.
+            Experience breathtaking safaris, pristine beaches, and cultural adventures across 
+            East Africa with Kenya's most trusted travel partner for over 15 years.
           </p>
           
           {/* CTA Buttons */}

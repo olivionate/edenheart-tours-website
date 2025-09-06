@@ -18,8 +18,7 @@ const Header = () => {
   const navItems = [
     { name: 'Home', href: '#home' },
     { name: 'Safari Tours', href: '#safaris' },
-    { name: 'Beach Holidays', href: '#beaches' },
-    { name: 'Luxury Packages', href: '#luxury' },
+    { name: 'Our Services', href: '#services' },
     { name: 'About Us', href: '#about' },
     { name: 'Contact', href: '#contact' },
   ];
