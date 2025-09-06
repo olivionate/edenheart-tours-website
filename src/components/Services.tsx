@@ -132,7 +132,7 @@ const Services = () => {
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
             Our 
-            <span className="text-transparent bg-gradient-sunset bg-clip-text"> Services</span>
+            <span className="text-accent"> Services</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
             Comprehensive travel solutions designed to meet all your East African adventure 
