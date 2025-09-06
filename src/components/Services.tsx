@@ -16,6 +16,12 @@ import {
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
+import safariImage from '@/assets/service-safari.jpg';
+import flightsImage from '@/assets/service-flights.jpg';
+import corporateImage from '@/assets/service-corporate.jpg';
+import hotelsImage from '@/assets/service-hotels.jpg';
+import conferenceImage from '@/assets/service-conference.jpg';
+import transfersImage from '@/assets/service-transfers.jpg';
 
 const Services = () => {
   const services = [
@@ -23,6 +29,7 @@ const Services = () => {
       icon: Binoculars,
       title: "Safaris & Expeditions",
       description: "Our Tours Department organizes reasonable and unique Adventure tours and Safaris with tailor-made itineraries for luxury and adventure travel.",
+      image: safariImage,
       features: [
         "Bush/nature walk adventures",
         "Hot air balloon adventures", 
@@ -39,6 +46,7 @@ const Services = () => {
       icon: Plane,
       title: "Flight Ticketing",
       description: "We provide the most direct and cost-effective flight schedules and routings for domestic, regional and international travel.",
+      image: flightsImage,
       features: [
         "Domestic flight bookings",
         "Regional & international flights",
@@ -52,6 +60,7 @@ const Services = () => {
       icon: Users,
       title: "Corporate Group Discounts",
       description: "Special rates and volume discounts for large groups traveling together, with preferred airlines and additional benefits.",
+      image: corporateImage,
       features: [
         "Group rates for 10+ passengers",
         "Negotiated special airline rates",
@@ -65,6 +74,7 @@ const Services = () => {
       icon: Hotel,
       title: "Hotel Reservations",
       description: "Amicable business relationships with hotel chains in Kenya, East Africa and worldwide, offering competitive year-round rates.",
+      image: hotelsImage,
       features: [
         "Contract rates with leading hotels",
         "Competitive offers year-round",
@@ -78,6 +88,7 @@ const Services = () => {
       icon: Presentation,
       title: "Conference Facilities",
       description: "We arrange conferences for large and small groups within and outside Nairobi with reputable hotels and lodges.",
+      image: conferenceImage,
       features: [
         "Conference venue arrangements",
         "Equipment provision",
@@ -91,6 +102,7 @@ const Services = () => {
       icon: Car,
       title: "Airport & Hotel Transfers",
       description: "Comprehensive vehicle services including airport transfers, car hire, and transportation solutions with competitive rates.",
+      image: transfersImage,
       features: [
         "Airport & hotel transfers",
         "Self-drive & chauffeur options",
@@ -149,8 +161,18 @@ const Services = () => {
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               <CardContent className="p-0 h-full flex flex-col">
+                {/* Service Image */}
+                <div className="relative h-48 overflow-hidden rounded-t-lg mb-6">
+                  <img 
+                    src={service.image}
+                    alt={service.title}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent" />
+                </div>
+
                 {/* Service Icon & Title */}
-                <div className="mb-6">
+                <div className="px-6">
                   <div className="bg-gradient-sunset rounded-full w-16 h-16 flex items-center justify-center mb-4 group-hover:shadow-glow transition-all">
                     <service.icon className="h-8 w-8 text-white" />
                   </div>
@@ -163,7 +185,7 @@ const Services = () => {
                 </div>
 
                 {/* Features List */}
-                <div className="flex-grow mb-6">
+                <div className="flex-grow mb-6 px-6">
                   <div className="space-y-2">
                     {service.features.map((feature, idx) => (
                       <div key={idx} className="flex items-start space-x-2">
@@ -175,7 +197,7 @@ const Services = () => {
                 </div>
 
                 {/* Highlight */}
-                <div className="bg-muted/50 rounded-lg p-3 mb-4">
+                <div className="bg-muted/50 rounded-lg p-3 mb-4 mx-6">
                   <Badge variant="secondary" className="mb-2 text-xs">
                     Key Advantage
                   </Badge>
@@ -185,12 +207,14 @@ const Services = () => {
                 </div>
 
                 {/* CTA */}
-                <Button 
-                  variant="outline" 
-                  className="w-full border-primary text-primary hover:bg-primary hover:text-white"
-                >
-                  Learn More
-                </Button>
+                <div className="px-6 pb-6">
+                  <Button 
+                    variant="outline" 
+                    className="w-full border-primary text-primary hover:bg-primary hover:text-white"
+                  >
+                    Learn More
+                  </Button>
+                </div>
               </CardContent>
             </Card>
           ))}
