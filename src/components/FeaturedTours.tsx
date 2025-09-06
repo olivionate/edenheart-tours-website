@@ -164,6 +164,13 @@ const FeaturedTours = () => {
             size="lg" 
             variant="outline"
             className="border-primary text-primary hover:bg-primary hover:text-white px-8 py-4"
+            onClick={() => {
+              // Scroll to services section or contact for more tours
+              const contactSection = document.getElementById('contact');
+              if (contactSection) {
+                contactSection.scrollIntoView({ behavior: 'smooth' });
+              }
+            }}
           >
             View All Tours & Packages
             <ArrowRight className="ml-2 h-5 w-5" />
