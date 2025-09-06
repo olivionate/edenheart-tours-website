@@ -64,7 +64,7 @@ const Contact = () => {
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
             Get In 
-            <span className="text-transparent bg-gradient-sunset bg-clip-text"> Touch</span>
+            <span className="text-accent"> Touch</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             Ready to embark on your next adventure? Let's plan the perfect Kenyan experience together.
