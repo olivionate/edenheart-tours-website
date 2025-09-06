@@ -54,7 +54,7 @@ const Header = () => {
             <img 
               src="/lovable-uploads/8acb9c1a-8bae-4222-9960-f32ff4fdb460.png" 
               alt="Edenheart Tours & Travel" 
-              className="h-12 w-auto"
+              className="h-16 w-auto"
             />
           </div>
 
