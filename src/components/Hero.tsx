@@ -32,7 +32,7 @@ const Hero = () => {
         <div className="mb-12 animate-fade-in-up">
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
             Discover Your
-            <span className="text-transparent bg-gradient-sunset bg-clip-text block">
+            <span className="text-accent block">
               Next Adventure
             </span>
           </h1>
