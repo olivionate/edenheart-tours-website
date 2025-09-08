@@ -213,13 +213,7 @@ const SafariTours = () => {
 
                     <Button 
                       className="w-full mb-4"
-                      onClick={() => {
-                        const contactSection = document.getElementById('contact');
-                        if (contactSection) {
-                          window.scrollTo({ top: 0, behavior: 'smooth' });
-                          setTimeout(() => navigate('/#contact'), 100);
-                        }
-                      }}
+                      onClick={() => navigate('/#contact')}
                     >
                       <Phone className="mr-2 h-4 w-4" />
                       Get Custom Quote
