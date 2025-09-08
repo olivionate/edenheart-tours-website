@@ -29,6 +29,84 @@ const SafariTours = () => {
       duration: "3 Days / 2 Nights",
       price: "From $750 per person",
       highlights: ["Unique Wildlife", "Cultural Immersion", "River Safari"]
+    },
+    {
+      name: "Tsavo East & West Safari",
+      duration: "6 Days / 5 Nights",
+      price: "From $1,450 per person",
+      highlights: ["Red Elephants of Tsavo", "Man-Eaters Legacy", "Vast Wilderness"]
+    },
+    {
+      name: "Lake Nakuru Flamingo Safari",
+      duration: "3 Days / 2 Nights",
+      price: "From $680 per person",
+      highlights: ["Pink Flamingo Flocks", "Black & White Rhinos", "Tree-Climbing Lions"]
+    },
+    {
+      name: "Mount Kenya Safari",
+      duration: "4 Days / 3 Nights",
+      price: "From $890 per person",
+      highlights: ["Mountain Wildlife", "Elephant Orphanage", "Scenic Landscapes"]
+    },
+    {
+      name: "Aberdare National Park",
+      duration: "3 Days / 2 Nights",
+      price: "From $720 per person",
+      highlights: ["Tree Hotels Experience", "Waterfalls & Mountains", "Bongo Antelope"]
+    },
+    {
+      name: "Ol Pejeta Conservancy",
+      duration: "4 Days / 3 Nights",
+      price: "From $1,150 per person",
+      highlights: ["Last Northern White Rhinos", "Chimpanzee Sanctuary", "Big Five Viewing"]
+    },
+    {
+      name: "Laikipia Conservancy Safari",
+      duration: "5 Days / 4 Nights",
+      price: "From $1,380 per person",
+      highlights: ["Private Conservancy", "Rare Wildlife Species", "Walking Safaris"]
+    },
+    {
+      name: "Meru National Park",
+      duration: "4 Days / 3 Nights",
+      price: "From $850 per person",
+      highlights: ["Elsa the Lioness Story", "Pristine Wilderness", "River Adventures"]
+    },
+    {
+      name: "Budget Maasai Mara Safari",
+      duration: "3 Days / 2 Nights",
+      price: "From $450 per person",
+      highlights: ["Camping Experience", "Game Drives", "Affordable Adventure"]
+    },
+    {
+      name: "Luxury Amboseli Experience",
+      duration: "5 Days / 4 Nights",
+      price: "From $2,250 per person",
+      highlights: ["5-Star Lodges", "Private Game Drives", "Kilimanjaro Views"]
+    },
+    {
+      name: "Great Rift Valley Safari",
+      duration: "7 Days / 6 Nights",
+      price: "From $1,650 per person",
+      highlights: ["Multiple Parks", "Lake System Tour", "Geological Wonders"]
+    },
+    {
+      name: "Northern Kenya Explorer",
+      duration: "8 Days / 7 Nights",
+      price: "From $1,950 per person",
+      highlights: ["Remote Wilderness", "Cultural Encounters", "Desert Landscapes"]
+    },
+    {
+      name: "Family Safari Adventure",
+      duration: "4 Days / 3 Nights",
+      price: "From $850 per person",
+      highlights: ["Child-Friendly Activities", "Educational Tours", "Safe Family Fun"]
+    },
+    {
+      name: "Photography Safari",
+      duration: "6 Days / 5 Nights",
+      price: "From $1,580 per person",
+      highlights: ["Professional Guide", "Best Light Conditions", "Wildlife Photography"]
     }
   ];
 
