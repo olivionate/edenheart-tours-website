@@ -58,8 +58,9 @@ const Hero = () => {
               size="lg"
               variant="outline"
               className="border-white text-white hover:bg-white hover:text-primary px-8 py-4 text-lg font-semibold"
+              onClick={() => navigate('/#about')}
             >
-              Beach Holidays
+              About Us
             </Button>
           </div>
         </div>
