@@ -211,6 +211,20 @@ const Services = () => {
                   <Button 
                     variant="outline" 
                     className="w-full border-primary text-primary hover:bg-primary hover:text-white"
+                    onClick={() => {
+                      const serviceRoutes = {
+                        "Safaris & Expeditions": "/services/safari-tours",
+                        "Flight Ticketing": "/services/flight-ticketing", 
+                        "Corporate Group Discounts": "/services/corporate-groups",
+                        "Hotel Reservations": "/services/hotel-reservations",
+                        "Conference Facilities": "/services/conference-facilities",
+                        "Airport & Hotel Transfers": "/services/transfers"
+                      };
+                      const route = serviceRoutes[service.title as keyof typeof serviceRoutes];
+                      if (route) {
+                        window.location.href = route;
+                      }
+                    }}
                   >
                     Learn More
                   </Button>

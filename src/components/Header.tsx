@@ -1,6 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, Phone, Mail } from 'lucide-react';
+import { Menu, X, Phone, Mail, ChevronDown } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from '@/components/ui/dropdown-menu';
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -18,9 +24,17 @@ const Header = () => {
   const navItems = [
     { name: 'Home', href: '#home' },
     { name: 'Safari Tours', href: '#safaris' },
-    { name: 'Our Services', href: '#services' },
     { name: 'About Us', href: '#about' },
     { name: 'Contact', href: '#contact' },
+  ];
+
+  const serviceItems = [
+    { name: 'Safari Tours & Expeditions', href: '/services/safari-tours' },
+    { name: 'Flight Ticketing', href: '/services/flight-ticketing' },
+    { name: 'Hotel Reservations', href: '/services/hotel-reservations' },
+    { name: 'Conference Facilities', href: '/services/conference-facilities' },
+    { name: 'Corporate Group Discounts', href: '/services/corporate-groups' },
+    { name: 'Airport & Hotel Transfers', href: '/services/transfers' },
   ];
 
   return (
@@ -50,6 +64,34 @@ const Header = () => {
                 {item.name}
               </a>
             ))}
+            
+            {/* Services Dropdown */}
+            <DropdownMenu>
+              <DropdownMenuTrigger className="flex items-center space-x-1 text-foreground hover:text-accent transition-colors duration-200 font-medium focus:outline-none">
+                <span>Our Services</span>
+                <ChevronDown className="h-4 w-4" />
+              </DropdownMenuTrigger>
+              <DropdownMenuContent className="w-64 bg-background border border-border shadow-elegant">
+                {serviceItems.map((service) => (
+                  <DropdownMenuItem key={service.name} asChild>
+                    <a
+                      href={service.href}
+                      className="flex w-full px-4 py-3 text-sm text-foreground hover:text-accent hover:bg-muted transition-colors cursor-pointer"
+                    >
+                      {service.name}
+                    </a>
+                  </DropdownMenuItem>
+                ))}
+                <DropdownMenuItem asChild>
+                  <a
+                    href="#services"
+                    className="flex w-full px-4 py-3 text-sm text-accent font-medium hover:bg-muted transition-colors cursor-pointer border-t border-border mt-1"
+                  >
+                    View All Services
+                  </a>
+                </DropdownMenuItem>
+              </DropdownMenuContent>
+            </DropdownMenu>
           </div>
 
           {/* CTA Button */}
