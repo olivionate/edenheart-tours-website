@@ -32,7 +32,7 @@ const Hero = () => {
         <div className="mb-12 animate-fade-in-up">
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
             Discover Your
-            <span className="text-white bg-brand-orange block px-4 py-2 rounded-lg">
+            <span className="text-white bg-primary block px-4 py-2 rounded-lg">
               Next Adventure
             </span>
           </h1>
@@ -45,7 +45,7 @@ const Hero = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
             <Button 
               size="lg"
-              className="bg-brand-orange hover:bg-brand-orange/90 text-white px-8 py-4 text-lg font-semibold hover-glow"
+              className="bg-primary hover:bg-primary/90 text-white px-8 py-4 text-lg font-semibold hover-glow"
             >
               Explore Safari Tours
               <ArrowRight className="ml-2 h-5 w-5" />
