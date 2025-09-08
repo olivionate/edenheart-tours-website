@@ -58,7 +58,12 @@ const Hero = () => {
               size="lg"
               variant="outline"
               className="border-white text-white hover:bg-white hover:text-primary px-8 py-4 text-lg font-semibold"
-              onClick={() => navigate('/#about')}
+              onClick={() => {
+                const aboutSection = document.getElementById('about');
+                if (aboutSection) {
+                  aboutSection.scrollIntoView({ behavior: 'smooth' });
+                }
+              }}
             >
               About Us
             </Button>
