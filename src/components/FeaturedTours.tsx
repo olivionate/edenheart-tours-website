@@ -149,7 +149,15 @@ const FeaturedTours = () => {
                 </div>
 
                 {/* CTA Button */}
-                <Button className="w-full bg-primary hover:bg-primary/90 group-hover:shadow-glow transition-all">
+                <Button 
+                  className="w-full bg-primary hover:bg-primary/90 group-hover:shadow-glow transition-all"
+                  onClick={() => {
+                    const contactSection = document.getElementById('contact');
+                    if (contactSection) {
+                      contactSection.scrollIntoView({ behavior: 'smooth' });
+                    }
+                  }}
+                >
                   Book This Adventure
                   <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
                 </Button>
