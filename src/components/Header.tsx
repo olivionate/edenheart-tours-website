@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X, ChevronDown } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { useNavigate } from 'react-router-dom';
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -9,6 +10,7 @@ import {
 } from '@/components/ui/dropdown-menu';
 
 const Header = () => {
+  const navigate = useNavigate();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
@@ -97,7 +99,11 @@ const Header = () => {
 
           {/* CTA Button */}
           <div className="hidden md:block">
-            <Button variant="default" className="bg-primary hover:bg-primary/90 hover:shadow-glow">
+            <Button 
+              variant="default" 
+              className="bg-primary hover:bg-primary/90 hover:shadow-glow"
+              onClick={() => navigate('/#contact')}
+            >
               Book Now
             </Button>
           </div>
@@ -125,7 +131,14 @@ const Header = () => {
               </a>
             ))}
             <div className="px-4 pt-4">
-              <Button variant="default" className="w-full bg-primary hover:bg-primary/90">
+              <Button 
+                variant="default" 
+                className="w-full bg-primary hover:bg-primary/90"
+                onClick={() => {
+                  navigate('/#contact');
+                  setIsMobileMenuOpen(false);
+                }}
+              >
                 Book Now
               </Button>
             </div>
