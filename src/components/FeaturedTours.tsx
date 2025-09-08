@@ -173,11 +173,8 @@ const FeaturedTours = () => {
             variant="outline"
             className="border-primary text-primary hover:bg-primary hover:text-white px-8 py-4"
             onClick={() => {
-              // Scroll to services section or contact for more tours
-              const contactSection = document.getElementById('contact');
-              if (contactSection) {
-                contactSection.scrollIntoView({ behavior: 'smooth' });
-              }
+              // Navigate to Safari Tours page
+              window.location.href = '/services/safari-tours';
             }}
           >
             View All Tours & Packages
