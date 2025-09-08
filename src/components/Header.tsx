@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, Phone, Mail, ChevronDown, MapPin, Clock } from 'lucide-react';
+import { Menu, X, ChevronDown } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import {
   DropdownMenu,
@@ -25,34 +25,9 @@ const Header = () => {
     { name: 'Home', href: '#home' },
     { name: 'Safari Tours', href: '#safaris' },
     { name: 'About Us', href: '#about' },
+    { name: 'Contact', href: '#contact' },
   ];
 
-  const contactInfo = [
-    {
-      icon: Phone,
-      title: "Call Us",
-      detail: "0721658788",
-      description: "Available 24/7 for emergencies"
-    },
-    {
-      icon: Mail,
-      title: "Email Us",
-      detail: "info@edenheart.co.ke",
-      description: "We respond within 2 hours"
-    },
-    {
-      icon: MapPin,
-      title: "Visit Us",
-      detail: "2nd Flr, Delta Hse, Nairobi CBD",
-      description: "Monday - Friday, 8AM - 6PM"
-    },
-    {
-      icon: Clock,
-      title: "Working Hours",
-      detail: "Mon - Fri: 8:00 AM - 6:00 PM",
-      description: "Sat: 9:00 AM - 4:00 PM"
-    }
-  ];
 
   const serviceItems = [
     { name: 'Safari Tours & Expeditions', href: '/services/safari-tours' },
@@ -116,44 +91,6 @@ const Header = () => {
                     View All Services
                   </a>
                 </DropdownMenuItem>
-              </DropdownMenuContent>
-            </DropdownMenu>
-
-            {/* Contact Dropdown */}
-            <DropdownMenu>
-              <DropdownMenuTrigger className="flex items-center space-x-1 text-foreground hover:text-accent transition-colors duration-200 font-medium focus:outline-none">
-                <span>Contact</span>
-                <ChevronDown className="h-4 w-4" />
-              </DropdownMenuTrigger>
-              <DropdownMenuContent className="w-80 bg-background border border-border shadow-elegant">
-                <div className="p-4">
-                  <h3 className="text-lg font-semibold text-foreground mb-4">Get In Touch</h3>
-                  <p className="text-sm text-muted-foreground mb-4">
-                    Ready to embark on your next adventure? Let's plan the perfect Kenyan experience together.
-                  </p>
-                  <div className="space-y-3">
-                    {contactInfo.map((info, index) => (
-                      <div key={index} className="flex items-start space-x-3">
-                        <div className="bg-gradient-sunset rounded-lg p-2">
-                          <info.icon className="h-4 w-4 text-white" />
-                        </div>
-                        <div className="flex-1">
-                          <h4 className="font-medium text-foreground text-sm">{info.title}</h4>
-                          <p className="text-sm text-muted-foreground">{info.detail}</p>
-                          <p className="text-xs text-accent font-medium">{info.description}</p>
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                  <div className="mt-4 pt-4 border-t border-border">
-                    <a
-                      href="#contact"
-                      className="flex w-full justify-center py-2 px-4 text-sm bg-gradient-sunset text-white rounded-md hover:shadow-glow transition-all duration-200"
-                    >
-                      Contact Us Now
-                    </a>
-                  </div>
-                </div>
               </DropdownMenuContent>
             </DropdownMenu>
           </div>
