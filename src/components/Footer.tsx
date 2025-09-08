@@ -1,7 +1,10 @@
 import React from 'react';
 import { Phone, Mail, MapPin, Facebook, Instagram, Twitter, Youtube } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 
 const Footer = () => {
+  const navigate = useNavigate();
+  
   const quickLinks = [
     { name: 'Safari Tours', href: '#safaris' },
     { name: 'Beach Holidays', href: '#beaches' },
@@ -12,12 +15,12 @@ const Footer = () => {
   ];
 
   const destinations = [
-    { name: 'Maasai Mara', href: '#masaimara' },
-    { name: 'Diani Beach', href: '#diani' },
-    { name: 'Amboseli', href: '#amboseli' },
-    { name: 'Tsavo East & West', href: '#tsavo' },
-    { name: 'Lake Nakuru', href: '#nakuru' },
-    { name: 'Samburu', href: '#samburu' }
+    { name: 'Maasai Mara', package: 'Maasai Mara Great Migration' },
+    { name: 'Diani Beach', package: 'Diani Beach Paradise' },
+    { name: 'Amboseli', package: 'Amboseli Elephant Safari' },
+    { name: 'Tsavo East & West', package: 'Tsavo East & West Safari' },
+    { name: 'Lake Nakuru', package: 'Lake Nakuru Flamingo Safari' },
+    { name: 'Samburu', package: 'Samburu Adventure' }
   ];
 
   const socialLinks = [
@@ -86,12 +89,12 @@ const Footer = () => {
             <ul className="space-y-3">
               {destinations.map((destination, index) => (
                 <li key={index}>
-                  <a 
-                    href={destination.href}
-                    className="text-primary-foreground/80 hover:text-accent transition-colors text-sm"
+                  <button 
+                    onClick={() => navigate('/services/safari-tours')}
+                    className="text-primary-foreground/80 hover:text-accent transition-colors text-sm cursor-pointer"
                   >
                     {destination.name}
-                  </a>
+                  </button>
                 </li>
               ))}
             </ul>
