@@ -25,6 +25,18 @@ const SafariTours = () => {
       highlights: ["Mount Kilimanjaro Views", "Large Elephant Herds", "Bird Watching"]
     },
     {
+      name: "Mount Kilimanjaro Climbing",
+      duration: "7 Days / 6 Nights",
+      price: "From $2,850 per person",
+      highlights: ["Africa's Highest Peak", "Machame Route", "Summit Achievement"]
+    },
+    {
+      name: "Diani Beach Paradise",
+      duration: "4 Days / 3 Nights",
+      price: "From $750 per person",
+      highlights: ["White Sand Beaches", "Snorkeling & Diving", "Water Sports"]
+    },
+    {
       name: "Samburu Adventure",
       duration: "3 Days / 2 Nights",
       price: "From $750 per person",
