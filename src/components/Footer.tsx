@@ -15,12 +15,12 @@ const Footer = () => {
   ];
 
   const destinations = [
-    { name: 'Maasai Mara', package: 'Maasai Mara Great Migration' },
-    { name: 'Diani Beach', package: 'Diani Beach Paradise' },
-    { name: 'Amboseli', package: 'Amboseli Elephant Safari' },
-    { name: 'Tsavo East & West', package: 'Tsavo East & West Safari' },
-    { name: 'Lake Nakuru', package: 'Lake Nakuru Flamingo Safari' },
-    { name: 'Samburu', package: 'Samburu Adventure' }
+    { name: 'Maasai Mara', package: 'maasai-mara-great-migration' },
+    { name: 'Diani Beach', package: 'diani-beach-paradise' },
+    { name: 'Amboseli', package: 'amboseli-elephant-safari' },
+    { name: 'Tsavo East & West', package: 'tsavo-east---west-safari' },
+    { name: 'Lake Nakuru', package: 'lake-nakuru-flamingo-safari' },
+    { name: 'Samburu', package: 'samburu-adventure' }
   ];
 
   const socialLinks = [
@@ -90,7 +90,15 @@ const Footer = () => {
               {destinations.map((destination, index) => (
                 <li key={index}>
                   <button 
-                    onClick={() => navigate('/services/safari-tours')}
+                    onClick={() => {
+                      navigate('/services/safari-tours');
+                      setTimeout(() => {
+                        const packageElement = document.getElementById(destination.package);
+                        if (packageElement) {
+                          packageElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                        }
+                      }, 100);
+                    }}
                     className="text-primary-foreground/80 hover:text-accent transition-colors text-sm cursor-pointer"
                   >
                     {destination.name}

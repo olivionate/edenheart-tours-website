@@ -246,7 +246,11 @@ const SafariTours = () => {
               </h3>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                 {tourPackages.map((tour, index) => (
-                  <Card key={index} className="p-6 hover-lift shadow-brand">
+                  <Card 
+                    key={index} 
+                    id={tour.name.toLowerCase().replace(/[^a-z0-9]/g, '-')}
+                    className="p-6 hover-lift shadow-brand"
+                  >
                     <CardContent className="p-0">
                       <h4 className="text-xl font-bold text-foreground mb-2">{tour.name}</h4>
                       <div className="flex items-center space-x-2 text-muted-foreground mb-3">
