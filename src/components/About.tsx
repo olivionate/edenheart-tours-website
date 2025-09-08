@@ -1,33 +1,43 @@
 import React from 'react';
 import { Shield, Heart, Globe, Award, Users, MapPin } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
+import experienceImage from '@/assets/about-experience.jpg';
+import tailormadeImage from '@/assets/about-tailormade.jpg';
+import guidesImage from '@/assets/about-guides.jpg';
+import destinationsImage from '@/assets/about-destinations.jpg';
+import certifiedImage from '@/assets/about-certified.jpg';
 
 const About = () => {
   const values = [
     {
       icon: Award,
       title: "Experience and Reliability",
-      description: "With years of experience, we have honed our expertise in providing authentic and stimulating safari experiences with long-standing industry relationships."
+      description: "With years of experience, we have honed our expertise in providing authentic and stimulating safari experiences with long-standing industry relationships.",
+      image: experienceImage
     },
     {
       icon: Heart,
       title: "Tailor-made Safaris",
-      description: "We offer tailor-made safaris that cater to individual budgets, schedules, and preferences, accommodating different interests and time limits."
+      description: "We offer tailor-made safaris that cater to individual budgets, schedules, and preferences, accommodating different interests and time limits.",
+      image: tailormadeImage
     },
     {
       icon: Users,
       title: "Expert Guides",
-      description: "Our network of expert local guides are knowledgeable, multilingual, and have extensive field experience for the best possible sightings."
+      description: "Our network of expert local guides are knowledgeable, multilingual, and have extensive field experience for the best possible sightings.",
+      image: guidesImage
     },
     {
       icon: Globe,
       title: "Variety of Destinations",
-      description: "We offer safaris to various destinations in Kenya, Tanzania, Uganda, and beach extensions, each with unique attractions to explore."
+      description: "We offer safaris to various destinations in Kenya, Tanzania, Uganda, and beach extensions, each with unique attractions to explore.",
+      image: destinationsImage
     },
     {
       icon: Shield,
       title: "Certified & Licensed",
-      description: "We are a licensed and certified tour operator, ensuring our clients are protected by necessary regulations and standards."
+      description: "We are a licensed and certified tour operator, ensuring our clients are protected by necessary regulations and standards.",
+      image: certifiedImage
     }
   ];
 
@@ -111,14 +121,26 @@ const About = () => {
             {values.map((value, index) => (
               <Card 
                 key={index} 
-                className="text-center p-6 hover-lift shadow-brand group"
+                className="overflow-hidden hover-lift shadow-brand group"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
-                <CardContent className="p-0">
-                  <div className="bg-gradient-sunset rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-6 group-hover:shadow-glow transition-all">
-                    <value.icon className="h-8 w-8 text-white" />
+                {/* Image */}
+                <div className="relative h-48 overflow-hidden">
+                  <img 
+                    src={value.image}
+                    alt={value.title}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
+                  
+                  {/* Icon */}
+                  <div className="absolute top-4 left-4 bg-gradient-sunset rounded-full w-12 h-12 flex items-center justify-center group-hover:shadow-glow transition-all">
+                    <value.icon className="h-6 w-6 text-white" />
                   </div>
-                  <h4 className="text-xl font-semibold text-foreground mb-4 group-hover:text-accent transition-colors">
+                </div>
+                
+                <CardContent className="p-6 text-center">
+                  <h4 className="text-lg font-semibold text-foreground mb-3 group-hover:text-accent transition-colors">
                     {value.title}
                   </h4>
                   <p className="text-muted-foreground text-sm leading-relaxed">
