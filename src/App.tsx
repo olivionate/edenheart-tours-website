@@ -13,6 +13,11 @@ import HotelReservations from "./pages/services/HotelReservations";
 import ConferenceFacilities from "./pages/services/ConferenceFacilities";
 import CorporateGroups from "./pages/services/CorporateGroups";
 import Transfers from "./pages/services/Transfers";
+import BeachHolidays from "./pages/services/BeachHolidays";
+import LuxuryPackages from "./pages/services/LuxuryPackages";
+import CulturalTours from "./pages/services/CulturalTours";
+import DayTrips from "./pages/services/DayTrips";
+import GroupTours from "./pages/services/GroupTours";
 
 const queryClient = new QueryClient();
 
@@ -27,6 +32,11 @@ const App = () => (
           <Route path="/about" element={<AboutUs />} />
           <Route path="/contact" element={<ContactPage />} />
           <Route path="/services/safari-tours" element={<SafariTours />} />
+          <Route path="/services/beach-holidays" element={<BeachHolidays />} />
+          <Route path="/services/luxury-packages" element={<LuxuryPackages />} />
+          <Route path="/services/cultural-tours" element={<CulturalTours />} />
+          <Route path="/services/day-trips" element={<DayTrips />} />
+          <Route path="/services/group-tours" element={<GroupTours />} />
           <Route path="/services/flight-ticketing" element={<FlightTicketing />} />
           <Route path="/services/hotel-reservations" element={<HotelReservations />} />
           <Route path="/services/conference-facilities" element={<ConferenceFacilities />} />

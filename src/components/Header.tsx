@@ -33,6 +33,11 @@ const Header = () => {
 
   const serviceItems = [
     { name: 'Safari Tours & Expeditions', href: '/services/safari-tours' },
+    { name: 'Beach Holidays', href: '/services/beach-holidays' },
+    { name: 'Luxury Packages', href: '/services/luxury-packages' },
+    { name: 'Cultural Tours', href: '/services/cultural-tours' },
+    { name: 'Day Trips', href: '/services/day-trips' },
+    { name: 'Group Tours', href: '/services/group-tours' },
     { name: 'Flight Ticketing', href: '/services/flight-ticketing' },
     { name: 'Hotel Reservations', href: '/services/hotel-reservations' },
     { name: 'Conference Facilities', href: '/services/conference-facilities' },

@@ -6,12 +6,12 @@ const Footer = () => {
   const navigate = useNavigate();
   
   const quickLinks = [
-    { name: 'Safari Tours', href: '#safaris' },
-    { name: 'Beach Holidays', href: '#beaches' },
-    { name: 'Luxury Packages', href: '#luxury' },
-    { name: 'Cultural Tours', href: '#culture' },
-    { name: 'Day Trips', href: '#daytrips' },
-    { name: 'Group Tours', href: '#groups' }
+    { name: 'Safari Tours', href: '/services/safari-tours' },
+    { name: 'Beach Holidays', href: '/services/beach-holidays' },
+    { name: 'Luxury Packages', href: '/services/luxury-packages' },
+    { name: 'Cultural Tours', href: '/services/cultural-tours' },
+    { name: 'Day Trips', href: '/services/day-trips' },
+    { name: 'Group Tours', href: '/services/group-tours' }
   ];
 
   const destinations = [
@@ -72,12 +72,12 @@ const Footer = () => {
             <ul className="space-y-3">
               {quickLinks.map((link, index) => (
                 <li key={index}>
-                  <a 
-                    href={link.href}
-                    className="text-primary-foreground/80 hover:text-accent transition-colors text-sm"
+                  <button 
+                    onClick={() => navigate(link.href)}
+                    className="text-primary-foreground/80 hover:text-accent transition-colors text-sm cursor-pointer"
                   >
                     {link.name}
-                  </a>
+                  </button>
                 </li>
               ))}
             </ul>
