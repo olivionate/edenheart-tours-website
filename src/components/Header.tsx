@@ -59,13 +59,22 @@ const Header = () => {
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
             {navItems.map((item) => (
-              <a
+              <button
                 key={item.name}
-                href={item.href}
-                className="text-foreground hover:text-accent transition-colors duration-200 font-medium"
+                onClick={() => {
+                  if (item.name === 'Home') {
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                  } else {
+                    const section = document.getElementById(item.href.replace('#', ''));
+                    if (section) {
+                      section.scrollIntoView({ behavior: 'smooth' });
+                    }
+                  }
+                }}
+                className="text-foreground hover:text-accent transition-colors duration-200 font-medium cursor-pointer"
               >
                 {item.name}
-              </a>
+              </button>
             ))}
             
             {/* Services Dropdown */}
@@ -121,14 +130,23 @@ const Header = () => {
         {isMobileMenuOpen && (
           <div className="md:hidden mt-4 py-4 bg-card rounded-lg shadow-elegant animate-slide-up">
             {navItems.map((item) => (
-              <a
+              <button
                 key={item.name}
-                href={item.href}
-                className="block py-3 px-4 text-foreground hover:text-accent hover:bg-muted transition-colors duration-200"
-                onClick={() => setIsMobileMenuOpen(false)}
+                onClick={() => {
+                  if (item.name === 'Home') {
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                  } else {
+                    const section = document.getElementById(item.href.replace('#', ''));
+                    if (section) {
+                      section.scrollIntoView({ behavior: 'smooth' });
+                    }
+                  }
+                  setIsMobileMenuOpen(false);
+                }}
+                className="block w-full text-left py-3 px-4 text-foreground hover:text-accent hover:bg-muted transition-colors duration-200"
               >
                 {item.name}
-              </a>
+              </button>
             ))}
             <div className="px-4 pt-4">
               <Button 
