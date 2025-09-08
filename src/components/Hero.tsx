@@ -2,9 +2,12 @@ import React from 'react';
 import { ArrowRight, Star, Users, Award } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
+import { useNavigate } from 'react-router-dom';
 import heroImage from '@/assets/hero-safari.jpg';
 
 const Hero = () => {
+  const navigate = useNavigate();
+  
   const stats = [
     { icon: Star, label: "5-Star Rating", value: "4.9/5" },
     { icon: Users, label: "Happy Travelers", value: "2,500+" },
@@ -46,6 +49,7 @@ const Hero = () => {
             <Button 
               size="lg"
               className="bg-primary hover:bg-primary/90 text-white px-8 py-4 text-lg font-semibold hover-glow"
+              onClick={() => navigate('/services/safari-tours')}
             >
               Explore Safari Tours
               <ArrowRight className="ml-2 h-5 w-5" />
