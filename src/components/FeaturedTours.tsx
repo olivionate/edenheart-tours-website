@@ -3,11 +3,14 @@ import { MapPin, Clock, Users, Star, ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
+import { useNavigate } from 'react-router-dom';
 import safariImage from '@/assets/hero-safari.jpg';
 import beachImage from '@/assets/beach-paradise.jpg';
 import luxuryImage from '@/assets/luxury-safari.jpg';
 
 const FeaturedTours = () => {
+  const navigate = useNavigate();
+  
   const tours = [
     {
       id: 1,
@@ -151,12 +154,7 @@ const FeaturedTours = () => {
                 {/* CTA Button */}
                 <Button 
                   className="w-full bg-primary hover:bg-primary/90 group-hover:shadow-glow transition-all"
-                  onClick={() => {
-                    const contactSection = document.getElementById('contact');
-                    if (contactSection) {
-                      contactSection.scrollIntoView({ behavior: 'smooth' });
-                    }
-                  }}
+                  onClick={() => navigate('/contact')}
                 >
                   Book This Adventure
                   <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />

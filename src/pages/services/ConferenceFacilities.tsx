@@ -155,7 +155,7 @@ const ConferenceFacilities = () => {
 
                     <Button 
                       className="w-full mb-4"
-                      onClick={() => navigate('/#contact')}
+                      onClick={() => navigate('/contact')}
                     >
                       <Phone className="mr-2 h-4 w-4" />
                       Plan Your Event
@@ -246,7 +246,7 @@ const ConferenceFacilities = () => {
               </p>
               <Button 
                 size="lg"
-                onClick={() => navigate('/#contact')}
+                onClick={() => navigate('/contact')}
               >
                 Start Event Planning
               </Button>

@@ -24,10 +24,10 @@ const Header = () => {
   }, []);
 
   const navItems = [
-    { name: 'Home', href: '#home' },
-    { name: 'Safari Tours', href: '#safaris' },
-    { name: 'About Us', href: '#about' },
-    { name: 'Contact', href: '#contact' },
+    { name: 'Home', href: '/' },
+    { name: 'Safari Tours', href: '/services/safari-tours' },
+    { name: 'About Us', href: '/about' },
+    { name: 'Contact', href: '/contact' },
   ];
 
 
@@ -61,16 +61,7 @@ const Header = () => {
             {navItems.map((item) => (
               <button
                 key={item.name}
-                onClick={() => {
-                  if (item.name === 'Home') {
-                    window.scrollTo({ top: 0, behavior: 'smooth' });
-                  } else {
-                    const section = document.getElementById(item.href.replace('#', ''));
-                    if (section) {
-                      section.scrollIntoView({ behavior: 'smooth' });
-                    }
-                  }
-                }}
+                onClick={() => navigate(item.href)}
                 className="text-foreground hover:text-accent transition-colors duration-200 font-medium cursor-pointer"
               >
                 {item.name}
@@ -111,7 +102,7 @@ const Header = () => {
             <Button 
               variant="default" 
               className="bg-primary hover:bg-primary/90 hover:shadow-glow"
-              onClick={() => navigate('/#contact')}
+              onClick={() => navigate('/contact')}
             >
               Book Now
             </Button>
@@ -133,14 +124,7 @@ const Header = () => {
               <button
                 key={item.name}
                 onClick={() => {
-                  if (item.name === 'Home') {
-                    window.scrollTo({ top: 0, behavior: 'smooth' });
-                  } else {
-                    const section = document.getElementById(item.href.replace('#', ''));
-                    if (section) {
-                      section.scrollIntoView({ behavior: 'smooth' });
-                    }
-                  }
+                  navigate(item.href);
                   setIsMobileMenuOpen(false);
                 }}
                 className="block w-full text-left py-3 px-4 text-foreground hover:text-accent hover:bg-muted transition-colors duration-200"
@@ -152,10 +136,7 @@ const Header = () => {
               <Button 
                 variant="default" 
                 className="w-full bg-primary hover:bg-primary/90"
-                onClick={() => {
-                  navigate('/#contact');
-                  setIsMobileMenuOpen(false);
-                }}
+                onClick={() => navigate('/contact')}
               >
                 Book Now
               </Button>
