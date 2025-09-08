@@ -97,7 +97,7 @@ const Header = () => {
 
           {/* CTA Button */}
           <div className="hidden md:block">
-            <Button variant="default" className="bg-gradient-sunset hover:shadow-glow">
+            <Button variant="default" className="bg-primary hover:bg-primary/90 hover:shadow-glow">
               Book Now
             </Button>
           </div>
@@ -125,7 +125,7 @@ const Header = () => {
               </a>
             ))}
             <div className="px-4 pt-4">
-              <Button variant="default" className="w-full bg-gradient-sunset">
+              <Button variant="default" className="w-full bg-primary hover:bg-primary/90">
                 Book Now
               </Button>
             </div>
