@@ -8,6 +8,7 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
+import logo from '@/assets/edenheart-logo.png';
 
 const Header = () => {
   const navigate = useNavigate();
@@ -55,9 +56,9 @@ const Header = () => {
           {/* Logo */}
           <div className="flex items-center space-x-3">
             <img 
-              src="/lovable-uploads/8acb9c1a-8bae-4222-9960-f32ff4fdb460.png" 
+              src={logo} 
               alt="Edenheart Tours & Travel" 
-              className="h-16 w-auto"
+              className="h-32 w-auto"
             />
           </div>
 
