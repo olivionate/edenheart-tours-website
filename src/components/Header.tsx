@@ -58,7 +58,7 @@ const Header = () => {
             <img 
               src={logo} 
               alt="Edenheart Tours & Travel" 
-              className="h-32 w-auto"
+              className="h-16 w-auto"
             />
           </div>
 
