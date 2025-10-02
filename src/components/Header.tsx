@@ -26,9 +26,7 @@ const Header = () => {
 
   const navItems = [
     { name: 'Home', href: '/' },
-    { name: 'Safari Tours', href: '/services/safari-tours' },
     { name: 'About Us', href: '/about' },
-    { name: 'Contact', href: '/contact' },
   ];
 
 
@@ -101,6 +99,20 @@ const Header = () => {
                 </DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>
+
+            <button
+              onClick={() => navigate('/services/safari-tours')}
+              className="text-foreground hover:text-accent transition-colors duration-200 font-medium cursor-pointer"
+            >
+              Safari Tours
+            </button>
+
+            <button
+              onClick={() => navigate('/contact')}
+              className="text-foreground hover:text-accent transition-colors duration-200 font-medium cursor-pointer"
+            >
+              Contact
+            </button>
           </div>
 
           {/* CTA Button */}
@@ -138,6 +150,24 @@ const Header = () => {
                 {item.name}
               </button>
             ))}
+            <button
+              onClick={() => {
+                navigate('/services/safari-tours');
+                setIsMobileMenuOpen(false);
+              }}
+              className="block w-full text-left py-3 px-4 text-foreground hover:text-accent hover:bg-muted transition-colors duration-200"
+            >
+              Safari Tours
+            </button>
+            <button
+              onClick={() => {
+                navigate('/contact');
+                setIsMobileMenuOpen(false);
+              }}
+              className="block w-full text-left py-3 px-4 text-foreground hover:text-accent hover:bg-muted transition-colors duration-200"
+            >
+              Contact
+            </button>
             <div className="px-4 pt-4">
               <Button 
                 variant="default" 
