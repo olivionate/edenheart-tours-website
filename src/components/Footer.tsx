@@ -1,6 +1,7 @@
 import React from 'react';
 import { Phone, Mail, MapPin, Facebook, Instagram, Twitter, Youtube } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
+import footerLogo from '@/assets/edenheart-footer-logo.png';
 
 const Footer = () => {
   const navigate = useNavigate();
@@ -39,9 +40,9 @@ const Footer = () => {
           <div className="space-y-6">
             <div>
               <img 
-                src="/lovable-uploads/8acb9c1a-8bae-4222-9960-f32ff4fdb460.png" 
+                src={footerLogo} 
                 alt="Edenheart Tours & Travel" 
-                className="h-16 w-auto mb-4"
+                className="h-12 sm:h-14 md:h-16 w-auto mb-4"
               />
               <p className="text-primary-foreground/80 leading-relaxed text-sm">
                 Your trusted partner for unforgettable Kenya adventures. From wildlife safaris 
