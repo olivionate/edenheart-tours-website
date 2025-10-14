@@ -121,6 +121,18 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground font-sans antialiased;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Smooth scrolling */
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Touch optimization for mobile */
+  * {
+    -webkit-tap-highlight-color: transparent;
   }
 
   /* Custom scrollbar */

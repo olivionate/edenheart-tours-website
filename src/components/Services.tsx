@@ -138,31 +138,31 @@ const Services = () => {
   ];
 
   return (
-    <section id="services" className="py-20 bg-background">
-      <div className="container mx-auto px-4">
+    <section id="services" className="py-12 sm:py-16 md:py-20 bg-background">
+      <div className="container mx-auto px-4 sm:px-6">
         {/* Section Header */}
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
+        <div className="text-center mb-12 sm:mb-16">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-4 sm:mb-6">
             Our 
             <span className="text-accent"> Services</span>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+          <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed px-2">
             Comprehensive travel solutions designed to meet all your East African adventure 
             and business travel needs with unmatched expertise and service.
           </p>
         </div>
 
         {/* Services Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8 mb-20">
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 sm:gap-8 mb-12 sm:mb-16 md:mb-20">
           {services.map((service, index) => (
             <Card 
               key={index}
-              className="p-6 hover-lift shadow-brand group h-full"
+              className="p-4 sm:p-6 hover-lift shadow-brand group h-full"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               <CardContent className="p-0 h-full flex flex-col">
                 {/* Service Image */}
-                <div className="relative h-48 overflow-hidden rounded-t-lg mb-6">
+                <div className="relative h-40 sm:h-48 overflow-hidden rounded-t-lg mb-4 sm:mb-6">
                   <img 
                     src={service.image}
                     alt={service.title}
@@ -172,20 +172,20 @@ const Services = () => {
                 </div>
 
                 {/* Service Icon & Title */}
-                <div className="px-6">
-                  <div className="bg-gradient-sunset rounded-full w-16 h-16 flex items-center justify-center mb-4 group-hover:shadow-glow transition-all">
-                    <service.icon className="h-8 w-8 text-white" />
+                <div className="px-4 sm:px-6">
+                  <div className="bg-gradient-sunset rounded-full w-12 sm:w-16 h-12 sm:h-16 flex items-center justify-center mb-3 sm:mb-4 group-hover:shadow-glow transition-all">
+                    <service.icon className="h-6 sm:h-8 w-6 sm:w-8 text-white" />
                   </div>
-                  <h3 className="text-xl font-bold text-foreground mb-3 group-hover:text-accent transition-colors">
+                  <h3 className="text-lg sm:text-xl font-bold text-foreground mb-2 sm:mb-3 group-hover:text-accent transition-colors">
                     {service.title}
                   </h3>
-                  <p className="text-muted-foreground text-sm leading-relaxed mb-4">
+                  <p className="text-muted-foreground text-sm leading-relaxed mb-3 sm:mb-4">
                     {service.description}
                   </p>
                 </div>
 
                 {/* Features List */}
-                <div className="flex-grow mb-6 px-6">
+                <div className="flex-grow mb-4 sm:mb-6 px-4 sm:px-6">
                   <div className="space-y-2">
                     {service.features.map((feature, idx) => (
                       <div key={idx} className="flex items-start space-x-2">
@@ -197,17 +197,17 @@ const Services = () => {
                 </div>
 
                 {/* Highlight */}
-                <div className="bg-muted/50 rounded-lg p-3 mb-4 mx-6">
-                  <Badge variant="secondary" className="mb-2 text-xs">
+                <div className="bg-muted/50 rounded-lg p-2 sm:p-3 mb-3 sm:mb-4 mx-4 sm:mx-6">
+                  <Badge variant="secondary" className="mb-1 sm:mb-2 text-xs">
                     Key Advantage
                   </Badge>
-                  <p className="text-sm text-foreground font-medium">
+                  <p className="text-xs sm:text-sm text-foreground font-medium">
                     {service.highlight}
                   </p>
                 </div>
 
                 {/* CTA */}
-                <div className="px-6 pb-6">
+                <div className="px-4 sm:px-6 pb-4 sm:pb-6">
                   <Button 
                     variant="outline" 
                     className="w-full border-primary text-primary hover:bg-primary hover:text-white"
@@ -235,28 +235,28 @@ const Services = () => {
         </div>
 
         {/* How We Work Section */}
-        <div className="bg-muted/30 rounded-2xl p-8 lg:p-12">
-          <div className="text-center mb-12">
-            <h3 className="text-3xl font-bold text-foreground mb-4">
+        <div className="bg-muted/30 rounded-2xl p-6 sm:p-8 lg:p-12">
+          <div className="text-center mb-8 sm:mb-12">
+            <h3 className="text-2xl sm:text-3xl font-bold text-foreground mb-3 sm:mb-4">
               How We Work
             </h3>
-            <p className="text-lg text-muted-foreground max-w-4xl mx-auto leading-relaxed">
+            <p className="text-base sm:text-lg text-muted-foreground max-w-4xl mx-auto leading-relaxed px-2">
               The foundation of our company is built on a reputation for excellence in providing 
               unwavering high quality customer care through extensive knowledge, personalized 
               service and competitive rates.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 mb-6 sm:mb-8">
             {workingPrinciples.map((principle, index) => (
               <div key={index} className="text-center">
-                <div className="bg-gradient-sunset rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4 shadow-glow">
-                  <principle.icon className="h-8 w-8 text-white" />
+                <div className="bg-gradient-sunset rounded-full w-14 sm:w-16 h-14 sm:h-16 flex items-center justify-center mx-auto mb-3 sm:mb-4 shadow-glow">
+                  <principle.icon className="h-7 sm:h-8 w-7 sm:w-8 text-white" />
                 </div>
-                <h4 className="text-lg font-semibold text-foreground mb-3">
+                <h4 className="text-base sm:text-lg font-semibold text-foreground mb-2 sm:mb-3">
                   {principle.title}
                 </h4>
-                <p className="text-sm text-muted-foreground leading-relaxed">
+                <p className="text-sm text-muted-foreground leading-relaxed px-2">
                   {principle.description}
                 </p>
               </div>

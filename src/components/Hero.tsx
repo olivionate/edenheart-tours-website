@@ -30,34 +30,34 @@ const Hero = () => {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 container mx-auto px-4 text-center">
+      <div className="relative z-10 container mx-auto px-4 sm:px-6 text-center">
         {/* Main Hero Content */}
-        <div className="mb-12 animate-fade-in-up">
-          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+        <div className="mb-8 sm:mb-12 animate-fade-in-up">
+          <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-4 sm:mb-6 leading-tight">
             Discover Your
-            <span className="text-white bg-primary block px-4 py-2 rounded-lg">
+            <span className="text-white bg-primary block px-3 sm:px-4 py-2 rounded-lg mt-2">
               Next Adventure
             </span>
           </h1>
-          <p className="text-xl md:text-2xl text-white/90 mb-8 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-white/90 mb-6 sm:mb-8 max-w-3xl mx-auto leading-relaxed px-2">
             Experience breathtaking safaris, pristine beaches, and cultural adventures across 
             East Africa with Kenya's most trusted travel partner for over 15 years.
           </p>
           
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center mb-8 sm:mb-12 px-2">
             <Button 
               size="lg"
-              className="bg-primary hover:bg-primary/90 text-white px-8 py-4 text-lg font-semibold hover-glow"
+              className="bg-primary hover:bg-primary/90 text-white px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-semibold hover-glow w-full sm:w-auto min-h-[48px]"
               onClick={() => navigate('/services/safari-tours')}
             >
               Explore Safari Tours
-              <ArrowRight className="ml-2 h-5 w-5" />
+              <ArrowRight className="ml-2 h-4 sm:h-5 w-4 sm:w-5" />
             </Button>
             <Button 
               size="lg"
               variant="outline"
-              className="border-white text-white hover:bg-white hover:text-primary px-8 py-4 text-lg font-semibold"
+              className="border-white text-white hover:bg-white hover:text-primary px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-semibold w-full sm:w-auto min-h-[48px]"
               onClick={() => navigate('/about')}
             >
               About Us
@@ -66,14 +66,14 @@ const Hero = () => {
         </div>
 
         {/* Stats Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto animate-scale-in">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 max-w-4xl mx-auto animate-scale-in px-2">
           {stats.map((stat, index) => (
-            <Card key={index} className="bg-white/10 backdrop-blur-md border-white/20 p-6 hover-lift">
-              <div className="flex items-center justify-center space-x-4 text-white">
-                <stat.icon className="h-8 w-8 text-accent" />
+            <Card key={index} className="bg-white/10 backdrop-blur-md border-white/20 p-4 sm:p-6 hover-lift">
+              <div className="flex items-center justify-center space-x-3 sm:space-x-4 text-white">
+                <stat.icon className="h-6 sm:h-8 w-6 sm:w-8 text-accent flex-shrink-0" />
                 <div className="text-left">
-                  <div className="text-2xl font-bold">{stat.value}</div>
-                  <div className="text-sm opacity-90">{stat.label}</div>
+                  <div className="text-xl sm:text-2xl font-bold">{stat.value}</div>
+                  <div className="text-xs sm:text-sm opacity-90">{stat.label}</div>
                 </div>
               </div>
             </Card>

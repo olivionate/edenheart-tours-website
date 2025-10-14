@@ -57,22 +57,22 @@ const FeaturedTours = () => {
   ];
 
   return (
-    <section id="safaris" className="py-20 bg-background">
-      <div className="container mx-auto px-4">
+    <section id="safaris" className="py-12 sm:py-16 md:py-20 bg-background">
+      <div className="container mx-auto px-4 sm:px-6">
         {/* Section Header */}
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
+        <div className="text-center mb-12 sm:mb-16">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-4 sm:mb-6">
             Featured 
             <span className="text-accent"> Adventures</span>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto px-2">
             Handpicked experiences that showcase the very best of Kenya's wildlife, 
             beaches, and cultural heritage.
           </p>
         </div>
 
         {/* Tours Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
           {tours.map((tour, index) => (
             <Card 
               key={tour.id}
@@ -80,7 +80,7 @@ const FeaturedTours = () => {
               style={{ animationDelay: `${index * 0.2}s` }}
             >
               {/* Tour Image */}
-              <div className="relative h-64 overflow-hidden">
+              <div className="relative h-48 sm:h-56 md:h-64 overflow-hidden">
                 <img 
                   src={tour.image}
                   alt={tour.title}
@@ -89,26 +89,26 @@ const FeaturedTours = () => {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
                 
                 {/* Badge */}
-                <Badge className="absolute top-4 left-4 bg-accent text-white">
+                <Badge className="absolute top-3 sm:top-4 left-3 sm:left-4 bg-accent text-white text-xs">
                   {tour.badge}
                 </Badge>
                 
                 {/* Price */}
-                <div className="absolute top-4 right-4 bg-white/90 backdrop-blur-sm rounded-lg px-3 py-2">
-                  <span className="text-primary font-bold text-lg">
+                <div className="absolute top-3 sm:top-4 right-3 sm:right-4 bg-white/90 backdrop-blur-sm rounded-lg px-2 sm:px-3 py-1 sm:py-2">
+                  <span className="text-primary font-bold text-base sm:text-lg">
                     {tour.price}
                   </span>
                   <div className="text-xs text-muted-foreground">per person</div>
                 </div>
               </div>
 
-              <CardContent className="p-6">
+              <CardContent className="p-4 sm:p-6">
                 {/* Tour Title & Rating */}
-                <div className="mb-4">
-                  <h3 className="text-xl font-bold text-foreground mb-2 group-hover:text-accent transition-colors">
+                <div className="mb-3 sm:mb-4">
+                  <h3 className="text-lg sm:text-xl font-bold text-foreground mb-2 group-hover:text-accent transition-colors">
                     {tour.title}
                   </h3>
-                  <div className="flex items-center space-x-2 mb-3">
+                  <div className="flex items-center space-x-2 mb-2 sm:mb-3">
                     <div className="flex items-center space-x-1">
                       <Star className="h-4 w-4 fill-yellow-400 text-yellow-400" />
                       <span className="font-medium text-sm">{tour.rating}</span>
@@ -118,30 +118,30 @@ const FeaturedTours = () => {
                 </div>
 
                 {/* Tour Details */}
-                <div className="space-y-3 mb-6">
+                <div className="space-y-2 sm:space-y-3 mb-4 sm:mb-6">
                   <div className="flex items-center space-x-2 text-muted-foreground">
-                    <MapPin className="h-4 w-4" />
+                    <MapPin className="h-4 w-4 flex-shrink-0" />
                     <span className="text-sm">{tour.location}</span>
                   </div>
-                  <div className="flex items-center space-x-4 text-muted-foreground">
+                  <div className="flex items-center flex-wrap gap-3 sm:gap-4 text-muted-foreground">
                     <div className="flex items-center space-x-2">
-                      <Clock className="h-4 w-4" />
+                      <Clock className="h-4 w-4 flex-shrink-0" />
                       <span className="text-sm">{tour.duration}</span>
                     </div>
                     <div className="flex items-center space-x-2">
-                      <Users className="h-4 w-4" />
+                      <Users className="h-4 w-4 flex-shrink-0" />
                       <span className="text-sm">{tour.groupSize}</span>
                     </div>
                   </div>
                 </div>
 
                 {/* Description */}
-                <p className="text-muted-foreground text-sm mb-6 leading-relaxed">
+                <p className="text-muted-foreground text-sm mb-4 sm:mb-6 leading-relaxed">
                   {tour.description}
                 </p>
 
                 {/* Highlights */}
-                <div className="mb-6">
+                <div className="mb-4 sm:mb-6">
                   <div className="flex flex-wrap gap-2">
                     {tour.highlights.map((highlight, idx) => (
                       <Badge key={idx} variant="secondary" className="text-xs">
@@ -153,7 +153,7 @@ const FeaturedTours = () => {
 
                 {/* CTA Button */}
                 <Button 
-                  className="w-full bg-primary hover:bg-primary/90 group-hover:shadow-glow transition-all"
+                  className="w-full bg-primary hover:bg-primary/90 group-hover:shadow-glow transition-all min-h-[44px]"
                   onClick={() => navigate('/contact')}
                 >
                   Book This Adventure
@@ -165,18 +165,18 @@ const FeaturedTours = () => {
         </div>
 
         {/* View All Tours CTA */}
-        <div className="text-center mt-12">
+        <div className="text-center mt-8 sm:mt-12 px-2">
           <Button 
             size="lg" 
             variant="outline"
-            className="border-primary text-primary hover:bg-primary hover:text-white px-8 py-4"
+            className="border-primary text-primary hover:bg-primary hover:text-white px-6 sm:px-8 py-3 sm:py-4 min-h-[48px] w-full sm:w-auto"
             onClick={() => {
               // Navigate to Safari Tours page
               window.location.href = '/services/safari-tours';
             }}
           >
             View All Tours & Packages
-            <ArrowRight className="ml-2 h-5 w-5" />
+            <ArrowRight className="ml-2 h-4 sm:h-5 w-4 sm:w-5" />
           </Button>
         </div>
       </div>

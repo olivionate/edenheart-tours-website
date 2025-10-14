@@ -58,24 +58,24 @@ const Contact = () => {
   ];
 
   return (
-    <section id="contact" className="py-20 bg-background">
-      <div className="container mx-auto px-4">
+    <section id="contact" className="py-12 sm:py-16 md:py-20 bg-background">
+      <div className="container mx-auto px-4 sm:px-6">
         {/* Section Header */}
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
+        <div className="text-center mb-12 sm:mb-16">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-4 sm:mb-6">
             Get In 
             <span className="text-accent"> Touch</span>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto px-2">
             Ready to embark on your next adventure? Let's plan the perfect Kenyan experience together.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 sm:gap-12">
           {/* Contact Information */}
-          <div className="lg:col-span-1 space-y-6">
-            <div className="mb-8">
-              <h3 className="text-2xl font-bold text-foreground mb-4">
+          <div className="lg:col-span-1 space-y-4 sm:space-y-6">
+            <div className="mb-6 sm:mb-8">
+              <h3 className="text-xl sm:text-2xl font-bold text-foreground mb-3 sm:mb-4">
                 Let's Plan Your Adventure
               </h3>
               <p className="text-muted-foreground leading-relaxed">
@@ -86,21 +86,21 @@ const Contact = () => {
 
             {contactInfo.map((info, index) => (
               <Card key={index} className="hover-lift shadow-brand">
-                <CardContent className="p-6">
-                  <div className="flex items-start space-x-4">
-                    <div className="bg-gradient-sunset rounded-lg p-3">
-                      <info.icon className="h-6 w-6 text-white" />
+                <CardContent className="p-4 sm:p-6">
+                  <div className="flex items-start space-x-3 sm:space-x-4">
+                    <div className="bg-gradient-sunset rounded-lg p-2 sm:p-3 flex-shrink-0">
+                      <info.icon className="h-5 w-5 sm:h-6 sm:w-6 text-white" />
                     </div>
-                    <div>
-                      <h4 className="font-semibold text-foreground mb-2">
+                    <div className="min-w-0 flex-1">
+                      <h4 className="font-semibold text-foreground mb-1 sm:mb-2 text-sm sm:text-base">
                         {info.title}
                       </h4>
                       {info.details.map((detail, idx) => (
-                        <p key={idx} className="text-muted-foreground text-sm mb-1">
+                        <p key={idx} className="text-muted-foreground text-xs sm:text-sm mb-1 break-words">
                           {detail}
                         </p>
                       ))}
-                      <p className="text-accent text-xs mt-2 font-medium">
+                      <p className="text-accent text-xs mt-1 sm:mt-2 font-medium">
                         {info.description}
                       </p>
                     </div>
@@ -111,15 +111,15 @@ const Contact = () => {
 
             {/* WhatsApp CTA */}
             <Card className="bg-gradient-sunset text-white hover-glow">
-              <CardContent className="p-6 text-center">
-                <MessageCircle className="h-12 w-12 mx-auto mb-4" />
-                <h4 className="font-semibold mb-2">Quick WhatsApp Chat</h4>
-                <p className="text-sm mb-4 opacity-90">
+              <CardContent className="p-4 sm:p-6 text-center">
+                <MessageCircle className="h-10 sm:h-12 w-10 sm:w-12 mx-auto mb-3 sm:mb-4" />
+                <h4 className="font-semibold mb-2 text-sm sm:text-base">Quick WhatsApp Chat</h4>
+                <p className="text-xs sm:text-sm mb-3 sm:mb-4 opacity-90">
                   Get instant responses to your travel questions
                 </p>
                 <Button 
                   variant="outline" 
-                  className="border-white text-white hover:bg-white hover:text-primary"
+                  className="border-white text-white hover:bg-white hover:text-primary min-h-[44px] w-full sm:w-auto"
                 >
                   Chat on WhatsApp
                 </Button>
@@ -130,14 +130,14 @@ const Contact = () => {
           {/* Contact Form */}
           <div className="lg:col-span-2">
             <Card className="shadow-elegant">
-              <CardHeader>
-                <CardTitle className="text-2xl text-foreground">
+              <CardHeader className="p-4 sm:p-6">
+                <CardTitle className="text-xl sm:text-2xl text-foreground">
                   Send Us a Message
                 </CardTitle>
               </CardHeader>
-              <CardContent>
-                <form onSubmit={handleSubmit} className="space-y-6">
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <CardContent className="p-4 sm:p-6">
+                <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
                     <div>
                       <label className="block text-sm font-medium text-foreground mb-2">
                         Full Name *
@@ -148,7 +148,7 @@ const Contact = () => {
                         onChange={handleChange}
                         placeholder="Your full name"
                         required
-                        className="w-full"
+                        className="w-full min-h-[44px]"
                       />
                     </div>
                     <div>
@@ -162,12 +162,12 @@ const Contact = () => {
                         onChange={handleChange}
                         placeholder="your@email.com"
                         required
-                        className="w-full"
+                        className="w-full min-h-[44px]"
                       />
                     </div>
                   </div>
 
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
                     <div>
                       <label className="block text-sm font-medium text-foreground mb-2">
                         Phone Number
@@ -177,7 +177,7 @@ const Contact = () => {
                         value={formData.phone}
                         onChange={handleChange}
                         placeholder="0721658788"
-                        className="w-full"
+                        className="w-full min-h-[44px]"
                       />
                     </div>
                     <div>
@@ -188,7 +188,7 @@ const Contact = () => {
                         name="tourType"
                         value={formData.tourType}
                         onChange={handleChange}
-                        className="w-full px-3 py-2 border border-input bg-background rounded-md focus:outline-none focus:ring-2 focus:ring-ring"
+                        className="w-full px-3 py-2 border border-input bg-background rounded-md focus:outline-none focus:ring-2 focus:ring-ring min-h-[44px]"
                       >
                         <option value="">Select tour type</option>
                         <option value="safari">Safari Tours</option>
@@ -211,17 +211,17 @@ const Contact = () => {
                       placeholder="Tell us about your dream Kenya experience..."
                       rows={5}
                       required
-                      className="w-full"
+                      className="w-full min-h-[120px]"
                     />
                   </div>
 
                   <Button 
                     type="submit"
                     size="lg"
-                    className="w-full md:w-auto bg-gradient-sunset hover:shadow-glow"
+                    className="w-full md:w-auto bg-gradient-sunset hover:shadow-glow min-h-[48px]"
                   >
                     Send Message
-                    <Send className="ml-2 h-5 w-5" />
+                    <Send className="ml-2 h-4 sm:h-5 w-4 sm:w-5" />
                   </Button>
                 </form>
               </CardContent>

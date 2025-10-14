@@ -137,9 +137,9 @@ const SafariTours = () => {
     <div className="min-h-screen bg-background">
       <Header />
       
-      <main className="pt-24">
+      <main className="pt-20 sm:pt-24">
         {/* Hero Section */}
-        <section className="relative h-[60vh] overflow-hidden">
+        <section className="relative h-[50vh] sm:h-[60vh] overflow-hidden">
           <img
             src={safariDetailImage}
             alt="Safari Tours"
@@ -147,19 +147,19 @@ const SafariTours = () => {
           />
           <div className="absolute inset-0 bg-black/40" />
           <div className="absolute inset-0 flex items-center justify-center">
-            <div className="text-center text-white max-w-4xl px-4">
+            <div className="text-center text-white max-w-4xl px-4 sm:px-6">
               <Button
                 variant="ghost"
                 onClick={() => navigate('/')}
-                className="mb-4 text-white hover:bg-white/20"
+                className="mb-3 sm:mb-4 text-white hover:bg-white/20 min-h-[44px]"
               >
                 <ArrowLeft className="mr-2 h-4 w-4" />
                 Back to Home
               </Button>
-              <h1 className="text-5xl md:text-6xl font-bold mb-6">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6">
                 Safari Tours & Expeditions
               </h1>
-              <p className="text-xl leading-relaxed">
+              <p className="text-base sm:text-lg md:text-xl leading-relaxed">
                 Experience the magic of East Africa's wildlife with our expertly crafted safari adventures
               </p>
             </div>
@@ -167,12 +167,12 @@ const SafariTours = () => {
         </section>
 
         {/* Content Section */}
-        <section className="py-20">
-          <div className="container mx-auto px-4">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
+        <section className="py-12 sm:py-16 md:py-20">
+          <div className="container mx-auto px-4 sm:px-6">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 mb-12 sm:mb-16">
               {/* Service Description */}
               <div>
-                <h2 className="text-3xl font-bold text-foreground mb-6">
+                <h2 className="text-2xl sm:text-3xl font-bold text-foreground mb-4 sm:mb-6">
                   Unforgettable Safari Experiences
                 </h2>
                 <p className="text-muted-foreground leading-relaxed mb-6">
@@ -200,31 +200,31 @@ const SafariTours = () => {
 
               {/* Quick Info Card */}
               <div>
-                <Card className="p-6 shadow-brand">
+                <Card className="p-4 sm:p-6 shadow-brand">
                   <CardContent className="p-0">
-                    <h3 className="text-2xl font-bold text-foreground mb-6">Safari Information</h3>
+                    <h3 className="text-xl sm:text-2xl font-bold text-foreground mb-4 sm:mb-6">Safari Information</h3>
                     
-                    <div className="space-y-4 mb-6">
+                    <div className="space-y-3 sm:space-y-4 mb-4 sm:mb-6">
                       <div className="flex items-center space-x-3">
-                        <MapPin className="h-5 w-5 text-accent" />
-                        <span className="text-muted-foreground">Kenya, Tanzania, Uganda</span>
+                        <MapPin className="h-5 w-5 text-accent flex-shrink-0" />
+                        <span className="text-muted-foreground text-sm sm:text-base">Kenya, Tanzania, Uganda</span>
                       </div>
                       <div className="flex items-center space-x-3">
-                        <Clock className="h-5 w-5 text-accent" />
-                        <span className="text-muted-foreground">2-14 Days Available</span>
+                        <Clock className="h-5 w-5 text-accent flex-shrink-0" />
+                        <span className="text-muted-foreground text-sm sm:text-base">2-14 Days Available</span>
                       </div>
                       <div className="flex items-center space-x-3">
-                        <Users className="h-5 w-5 text-accent" />
-                        <span className="text-muted-foreground">Solo to Group Tours</span>
+                        <Users className="h-5 w-5 text-accent flex-shrink-0" />
+                        <span className="text-muted-foreground text-sm sm:text-base">Solo to Group Tours</span>
                       </div>
                       <div className="flex items-center space-x-3">
-                        <Star className="h-5 w-5 text-accent" />
-                        <span className="text-muted-foreground">4.9/5 Guest Rating</span>
+                        <Star className="h-5 w-5 text-accent flex-shrink-0" />
+                        <span className="text-muted-foreground text-sm sm:text-base">4.9/5 Guest Rating</span>
                       </div>
                     </div>
 
                     <Button 
-                      className="w-full mb-4"
+                      className="w-full mb-3 sm:mb-4 min-h-[48px]"
                       onClick={() => navigate('/contact')}
                     >
                       <Phone className="mr-2 h-4 w-4" />
@@ -240,24 +240,24 @@ const SafariTours = () => {
             </div>
 
             {/* Tour Packages */}
-            <div className="mb-16">
-              <h3 className="text-3xl font-bold text-foreground mb-8 text-center">
+            <div className="mb-12 sm:mb-16">
+              <h3 className="text-2xl sm:text-3xl font-bold text-foreground mb-6 sm:mb-8 text-center">
                 Popular Safari Packages
               </h3>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
                 {tourPackages.map((tour, index) => (
                   <Card 
                     key={index} 
                     id={tour.name.toLowerCase().replace(/[^a-z0-9]/g, '-')}
-                    className="p-6 hover-lift shadow-brand"
+                    className="p-4 sm:p-6 hover-lift shadow-brand"
                   >
                     <CardContent className="p-0">
-                      <h4 className="text-xl font-bold text-foreground mb-2">{tour.name}</h4>
-                      <div className="flex items-center space-x-2 text-muted-foreground mb-3">
-                        <Clock className="h-4 w-4" />
+                      <h4 className="text-lg sm:text-xl font-bold text-foreground mb-2">{tour.name}</h4>
+                      <div className="flex items-center space-x-2 text-muted-foreground mb-2 sm:mb-3">
+                        <Clock className="h-4 w-4 flex-shrink-0" />
                         <span className="text-sm">{tour.duration}</span>
                       </div>
-                      <p className="text-lg font-semibold text-accent mb-4">{tour.price}</p>
+                      <p className="text-base sm:text-lg font-semibold text-accent mb-3 sm:mb-4">{tour.price}</p>
                       <div className="space-y-2">
                         {tour.highlights.map((highlight, idx) => (
                           <div key={idx} className="flex items-center space-x-2">
@@ -273,17 +273,18 @@ const SafariTours = () => {
             </div>
 
             {/* CTA Section */}
-            <div className="text-center bg-muted/30 rounded-2xl p-8">
-              <h3 className="text-3xl font-bold text-foreground mb-4">
+            <div className="text-center bg-muted/30 rounded-2xl p-6 sm:p-8">
+              <h3 className="text-2xl sm:text-3xl font-bold text-foreground mb-3 sm:mb-4">
                 Ready for Your Safari Adventure?
               </h3>
-              <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
+              <p className="text-sm sm:text-base text-muted-foreground mb-4 sm:mb-6 max-w-2xl mx-auto">
                 Contact us today to create your perfect safari experience. Our team will work with you 
                 to design an itinerary that matches your interests, budget, and timeline.
               </p>
               <Button 
                 size="lg"
                 onClick={() => navigate('/contact')}
+                className="min-h-[48px] w-full sm:w-auto"
               >
                 Start Planning Your Safari
               </Button>
