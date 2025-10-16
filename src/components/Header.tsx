@@ -82,21 +82,28 @@ const Header = () => {
               <DropdownMenuContent className="w-64 bg-background border border-border shadow-elegant">
                 {serviceItems.map((service) => (
                   <DropdownMenuItem key={service.name} asChild>
-                    <a
-                      href={service.href}
+                    <button
+                      onClick={() => navigate(service.href)}
                       className="flex w-full px-4 py-3 text-sm text-foreground hover:text-accent hover:bg-muted transition-colors cursor-pointer"
                     >
                       {service.name}
-                    </a>
+                    </button>
                   </DropdownMenuItem>
                 ))}
                 <DropdownMenuItem asChild>
-                  <a
-                    href="#services"
+                  <button
+                    onClick={() => {
+                      const element = document.getElementById('services');
+                      if (element) {
+                        element.scrollIntoView({ behavior: 'smooth' });
+                      } else {
+                        navigate('/#services');
+                      }
+                    }}
                     className="flex w-full px-4 py-3 text-sm text-accent font-medium hover:bg-muted transition-colors cursor-pointer border-t border-border mt-1"
                   >
                     View All Services
-                  </a>
+                  </button>
                 </DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>
