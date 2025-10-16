@@ -14,6 +14,7 @@ const Header = () => {
   const navigate = useNavigate();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isMobileServicesOpen, setIsMobileServicesOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -151,6 +152,35 @@ const Header = () => {
                 {item.name}
               </button>
             ))}
+            
+            {/* Mobile Services Menu */}
+            <div>
+              <button
+                onClick={() => setIsMobileServicesOpen(!isMobileServicesOpen)}
+                className="flex items-center justify-between w-full py-3 px-4 text-foreground hover:text-accent hover:bg-muted transition-colors duration-200 min-h-[48px]"
+              >
+                <span>Our Services</span>
+                <ChevronDown className={`h-4 w-4 transition-transform duration-200 ${isMobileServicesOpen ? 'rotate-180' : ''}`} />
+              </button>
+              {isMobileServicesOpen && (
+                <div className="bg-muted/50">
+                  {serviceItems.map((service) => (
+                    <button
+                      key={service.name}
+                      onClick={() => {
+                        navigate(service.href);
+                        setIsMobileMenuOpen(false);
+                        setIsMobileServicesOpen(false);
+                      }}
+                      className="block w-full text-left py-3 pl-8 pr-4 text-sm text-foreground hover:text-accent hover:bg-muted transition-colors duration-200 min-h-[48px]"
+                    >
+                      {service.name}
+                    </button>
+                  ))}
+                </div>
+              )}
+            </div>
+
             <button
               onClick={() => {
                 navigate('/services/safari-tours');
