@@ -35,7 +35,7 @@ const Footer = () => {
     <footer className="bg-primary text-primary-foreground">
       {/* Main Footer */}
       <div className="container mx-auto px-4 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {/* Company Info */}
           <div className="space-y-6">
             <div>
@@ -109,44 +109,6 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Newsletter & Social */}
-          <div>
-            <h3 className="text-lg font-semibold mb-6">Stay Connected</h3>
-            <div className="space-y-6">
-              <div>
-                <p className="text-primary-foreground/80 text-sm mb-4">
-                  Subscribe to get travel tips and exclusive offers
-                </p>
-                <div className="flex">
-                  <input
-                    type="email"
-                    placeholder="Your email"
-                    className="flex-1 px-3 py-2 bg-white/10 border border-white/20 rounded-l-lg text-sm placeholder:text-white/60 focus:outline-none focus:border-accent"
-                  />
-                  <button className="px-4 py-2 bg-accent hover:bg-accent/90 rounded-r-lg transition-colors">
-                    <Mail className="h-4 w-4" />
-                  </button>
-                </div>
-              </div>
-
-              {/* Social Media */}
-              <div>
-                <h4 className="font-medium mb-4">Follow Us</h4>
-                <div className="flex space-x-4">
-                  {socialLinks.map((social, index) => (
-                    <a
-                      key={index}
-                      href={social.href}
-                      aria-label={social.label}
-                      className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-accent transition-colors group"
-                    >
-                      <social.icon className="h-5 w-5 group-hover:scale-110 transition-transform" />
-                    </a>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
 
@@ -158,15 +120,24 @@ const Footer = () => {
               © 2024 Edenheart Tours & Travel. All rights reserved.
             </div>
             <div className="flex space-x-6 text-sm">
-              <a href="#" className="text-primary-foreground/80 hover:text-accent transition-colors">
+              <button 
+                onClick={() => navigate('/privacy-policy')}
+                className="text-primary-foreground/80 hover:text-accent transition-colors cursor-pointer"
+              >
                 Privacy Policy
-              </a>
-              <a href="#" className="text-primary-foreground/80 hover:text-accent transition-colors">
+              </button>
+              <button 
+                onClick={() => navigate('/terms-of-service')}
+                className="text-primary-foreground/80 hover:text-accent transition-colors cursor-pointer"
+              >
                 Terms of Service
-              </a>
-              <a href="#" className="text-primary-foreground/80 hover:text-accent transition-colors">
+              </button>
+              <button 
+                onClick={() => navigate('/cookie-policy')}
+                className="text-primary-foreground/80 hover:text-accent transition-colors cursor-pointer"
+              >
                 Cookie Policy
-              </a>
+              </button>
             </div>
           </div>
         </div>

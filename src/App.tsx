@@ -18,6 +18,9 @@ import LuxuryPackages from "./pages/services/LuxuryPackages";
 import CulturalTours from "./pages/services/CulturalTours";
 import DayTrips from "./pages/services/DayTrips";
 import GroupTours from "./pages/services/GroupTours";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
+import TermsOfService from "./pages/TermsOfService";
+import CookiePolicy from "./pages/CookiePolicy";
 
 const queryClient = new QueryClient();
 
@@ -42,6 +45,9 @@ const App = () => (
           <Route path="/services/conference-facilities" element={<ConferenceFacilities />} />
           <Route path="/services/corporate-groups" element={<CorporateGroups />} />
           <Route path="/services/transfers" element={<Transfers />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+          <Route path="/terms-of-service" element={<TermsOfService />} />
+          <Route path="/cookie-policy" element={<CookiePolicy />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
